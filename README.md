@@ -66,7 +66,41 @@ sudo apt -y install git
 
 ### Script servidor Mysql
 
+```
+echo " Actualizamos paquetes"
 
+    sudo apt update
+    sudo apt upgrade -y
+
+echo "Instalacion de mysql"
+    sudo apt -y install default-mysql-server
+    
+
+# Definimos variables para la creacion de usuario mysql
+        usuariodb="abel"
+        passdb="11111111"
+############################
+
+echo "Crear usuario para MYSQL y modificar password de root"
+
+#creamos el usuario que definimos en variable para el cliente .21.21
+sudo mysql -u root -e "CREATE USER '$usuariodb'@'192.168.21.21' IDENTIFIED BY '$passdb';"
+# damos todos los privilegios al usuario desde la ip del cliente
+sudo mysql -u root -e "GRANT ALL PRIVILEGES ON *.* TO '$usuariodb'@'192.168.21.21';"
+# modificamos root del servidor para ponerle la pass 1234
+sudo mysql -u root -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '1234';"
+# Actualizamos privilegios
+sudo mysql -u root -e "FLUSH PRIVILEGES;"
+# Finalmente recargamos el servidor mysql para que adopte la nueva configuración
+sudo systemctl reload mysql-server
+```
+Comentaremos brevemente, ya que todas las lineas del script estan comentadas.
+
+* Actualización de paquetes y repositorios
+* Instalamos la version de mysql actual, que previamente buscamos con apt search
+* Vamos a crear unas variables para definir usuario y contraseña del usuario administrador, que podriamos darle mayor utilidad en otro contexto.
+* Creamos el usuario, con la contraseña que generamos y le damos todos los permisos en todo el servidor (*.*)
+* Cambiamos la contraseña de root, y recargamos la configuración.
 
 
 [![](https://turismomadrid.es/images/Portada/2017/castillo-mr-nov-art-portada-2018.jpg)](https://www.as.com/)
