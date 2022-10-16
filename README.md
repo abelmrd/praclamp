@@ -7,7 +7,7 @@ Vamos a explicar las lineas que modificamos o añadimos según las necesidades d
 
 
 ` 
-    config.vm.define "serverapache" do |serverapache|
+    ``config.vm.define "serverapache" do |serverapache|
 
     serverapache.vm.box = "debian/bullseye64"
 
