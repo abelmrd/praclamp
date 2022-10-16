@@ -148,7 +148,7 @@ En nuestra prática sera /www/var/app.
 #### Podemos ver el nombre de las diferentes maquinas y como ambas se pueden conectar, una desde remoto con el usuario abel y otra desde root en local.
 
 
-![Apache]https://github.com/abelmrd/praclamp/blob/main/apache.PNG![]
+![Apache](https://github.com/abelmrd/praclamp/blob/main/imagenes/apache.PNG)
 ![MYSQL]https://github.com/abelmrd/praclamp/blob/main/mysql.PNG![]
 
 ![Imagen local](https://github.com/abelmrd/repositorio/blob/main/images/867994_1.jpg)
