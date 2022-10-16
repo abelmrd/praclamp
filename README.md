@@ -132,7 +132,8 @@ En nuestra prática sera /www/var/app.
 3. Movemos el adminer.php a esta misma ruta.
 4. Una vez que tenemos todos los archivos, modificamos el archivo 000-default situado en sites-enabled para decirle que la ruta nueva sera /www/var/app y no /html.
 5. Configuramos el archivo config.php para indicarle los parametros de nuestro usuario y base de datos que tiene que utilizar en la ejecución de la aplicación.
-6. Reiniciamos apache con ´´´´sudo systemctl restart apache´´´
+6. Reiniciamos apache
+```sudo systemctl restart apache```
 
 
 [![](https://turismomadrid.es/images/Portada/2017/castillo-mr-nov-art-portada-2018.jpg)](https://www.as.com/)
