@@ -108,11 +108,32 @@ Una vez comprobado que se instala todo sin problemas, vamos a realizar un ping e
 ``` Ping 192.168.21.22 ```
 Al ejecutar desde apache (192.168.21.21) nos da respuesta.
 
-Para mostrarle al servidor Mysql cual es la ip donde tiene que permitir conexiones buscaremos el archivo "50-server.cnf" para cambiar este parametro por la ip del servidor mysql.
+Para mostrarle al servidor Mysql cual es la ip donde tiene que permitir conexiones buscaremos el archivo "50-server.cnf" para cambiar este parametro por la ip del servidor mysql. 
+La ruta sera la siguiente:
 ```
 /etc/mysql/mariadb.conf.d/50-server.cnf
 ```
+El parametro a modificar por la ip de nuestro servidor
 ```bind-address            = 192.168.21.22```
+
+Una vez hecho, comprobamos que podemos conectarnos con el usuario creado desde apache.
+```
+mysql -u abel -p -h 192.168.21.22
+```
+Todo correcto, es hora de implementar nuestra aplicación.
+
+## Implementación de aplicación
+
+Intentamos clonar con git clone desde el repositorio proporcionado, pero no nos funciona.
+#### Pasos para la aplicación
+1. Descargamos los archivos en a ruta compartida con vagrant.
+2. Movemos los archivos de la aplicacíon a una nueva carpeta creada en /www/var/.
+En nuestra prática sera /www/var/app.
+3. Movemos el adminer.php a esta misma ruta.
+4. Una vez que tenemos todos los archivos, modificamos el archivo 000-default situado en sites-enabled para decirle que la ruta nueva sera /www/var/app y no /html.
+5. Configuramos el archivo config.php para indicarle los parametros de nuestro usuario y base de datos que tiene que utilizar en la ejecución de la aplicación.
+6. Reiniciamos apache con ´´´´sudo systemctl restart apache´´´
+
 
 [![](https://turismomadrid.es/images/Portada/2017/castillo-mr-nov-art-portada-2018.jpg)](https://www.as.com/)
 
