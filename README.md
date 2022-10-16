@@ -137,7 +137,7 @@ En nuestra prática sera /www/var/app.
 
 #### Configuración de la base de datos
 1. En primer lugar modificaremos el archivo database.sql para adecuarlo al usuario y contraseña que generamos para nuestro cliente. 
-2. Una vez modificado entramos en el gestor con ````mysql -u abel -p -h 192.168.21.22```
+2. Una vez modificado entramos en el gestor con ```mysql -u abel -p -h 192.168.21.22```
 3. Le decimos la ruta de donde tiene que importar la base de datos
 ```source /vagrant/db/database.sql```
 
