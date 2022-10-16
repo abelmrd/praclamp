@@ -25,12 +25,38 @@ Vamos a explicar las lineas que modificamos o añadimos según las necesidades d
 
 * Utilizaremos una debian bullseye.
 * Le asignamos el nombre al servidor que nos requiere la practica. 
-* En este servidor añadimos interfaz pública y privada, ya que requiere salida a exterior y tambien conectarse al equipo MYSQL en red local. * Este utimo servidor solo tendrá la red privada, por tanto un único adaptador de red, con una ip local 192.168.21.22 /24 .
+* En este servidor añadimos interfaz pública y privada, ya que requiere salida a exterior y tambien conectarse al equipo MYSQL en red local. Este utimo servidor solo tendrá la red privada, por tanto un único adaptador de red, con una ip local 192.168.21.22 /24 .
 * En ambos casos definimos como la carpeta compartida la ruta /vagrant
-Para dar un entorno listo para comenzar a configurar aprovisionaremos con dos scripts que previamente hemos hecho ambas maquinas, al estar en la ruta del vagrant con poner el nombre es suficiente.
+Para dar un entorno listo para comenzar a configurar aprovisionaremos con dos scripts que previamente hemos hecho para ambas maquinas, al estar en la ruta del vagrant con poner el nombre en el path es suficiente.
 
-# Hola, es un encabezado h1
-## Ponemos tantas almohadillas como queramos de 1 a 6
+
+## Scripts de aprovisionamiento
+```
+echo " Actualizamos repositorios y paquetes"
+
+    sudo apt update 
+    sudo apt upgrade -y
+
+echo "Instalacion de paquetes LAMP. Apache"
+    sudo apt -y install apache2 
+    sudo systemctl reload apache2
+    sudo apt -y install default-mysql-server
+
+echo " Instalacion de php"
+    sudo apt -y install php libapache2-mod-php php-mysql
+
+    #sudo apt -y install phpmyadmin php-mbstring php-zip php-gd php-json php-curl
+    #instalamos adminer y lo movemos al www
+ sudo wget https://github.com/vrana/adminer/releases/download/v4.8.1/adminer-4.8.1-mysql.php
+ sudo find / -type f -name *adminer* -exec mv {} /var/www/adminer.php \; 
+
+
+
+
+echo "Instalamos git"
+
+    sudo apt -y install git
+```
 
 
 
