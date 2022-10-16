@@ -31,6 +31,8 @@ Para dar un entorno listo para comenzar a configurar aprovisionaremos con dos sc
 
 
 ## Scripts de aprovisionamiento
+### Script script apache
+
 ```
 echo " Actualizamos repositorios y paquetes"
 
@@ -46,17 +48,24 @@ echo " Instalacion de php"
     sudo apt -y install php libapache2-mod-php php-mysql
 
     #sudo apt -y install phpmyadmin php-mbstring php-zip php-gd php-json php-curl
-    #instalamos adminer y lo movemos al www
+    #instalamos adminer y lo movemos al directorio www
  sudo wget https://github.com/vrana/adminer/releases/download/v4.8.1/adminer-4.8.1-mysql.php
  sudo find / -type f -name *adminer* -exec mv {} /var/www/adminer.php \; 
 
-
-
-
 echo "Instalamos git"
-
-    sudo apt -y install git
+sudo apt -y install git
 ```
+
+* En este script vamos a actualizar repositorios y paquetes con update y upgrade.
+* Instalaremos apache mostrando algunos mensajes al usuario.
+* Instalamos tambien mysql para conectarnos al servidor
+* Una vez instalado el codigo sigue instalando PHP
+* En este caso no instalamos phpmyadmin, por eso comentamos con#. No conseguimos que funcione, y nos paraliza la instalacion.
+* Para subsanarlo instalamos adminer que ademas es más ligero y sencillo de implementar. Una vez descargado buscamos su ubicación y la movemos al directorio /www, para tenerlo localizado facilmente a la hora de moverlo al directorio final de nuestra aplicación.
+* El último paso es instalar git para cualquier necesidad de actualizar nuestro proyecto.
+
+### Script servidor Mysql
+
 
 
 
