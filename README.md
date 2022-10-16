@@ -140,6 +140,12 @@ En nuestra prática sera /www/var/app.
 2. Una vez modificado entramos en el gestor con ```mysql -u abel -p -h 192.168.21.22```
 3. Le decimos la ruta de donde tiene que importar la base de datos
 ```source /vagrant/db/database.sql```
+4. Comprobamos que podemos hacer consultas, y que nos arroja los datos que previamente insertamos desde un navegador web.
+
+
+### Capturas de interconexión de máquinas
+
+#### Podemos ver el nombre de las diferentes maquinas y como ambas se pueden conectar, una desde remoto con el usuario abel y otra desde root en local.
 
 [](https://turismomadrid.es/images/Portada/2017/castillo-mr-nov-art-portada-2018.jpg)](https://www.as.com/)
 
