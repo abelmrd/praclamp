@@ -21,12 +21,12 @@ Vamos a explicar las lineas que modificamos o añadimos según las necesidades d
     serverapache.vm.provision "shell", path: "scripta.sh"
 
 
-Vamos a definir el servidor como "serverapache". 
+*Vamos a definir el servidor como "serverapache". 
 
-Utilizaremos una debian bullseye.
-Le asignamos el nombre al servidor que nos requiere la practica. 
-En este servidor añadimos interfaz pública y privada, ya que requiere salida a exterior y tambien conectarse al equipo MYSQL en red local. Este utimo servidor solo tendrá la red privada, por tanto un único adaptador de red, con una ip local 192.168.21.22 /24 .
-En ambos casos definimos como la carpeta compartida la ruta /vagrant
+*Utilizaremos una debian bullseye.
+*Le asignamos el nombre al servidor que nos requiere la practica. 
+*En este servidor añadimos interfaz pública y privada, ya que requiere salida a exterior y tambien conectarse al equipo MYSQL en red local. *Este utimo servidor solo tendrá la red privada, por tanto un único adaptador de red, con una ip local 192.168.21.22 /24 .
+*En ambos casos definimos como la carpeta compartida la ruta /vagrant
 Para dar un entorno listo para comenzar a configurar aprovisionaremos con dos scripts que previamente hemos hecho ambas maquinas, al estar en la ruta del vagrant con poner el nombre es suficiente.
 
 # Hola, es un encabezado h1
