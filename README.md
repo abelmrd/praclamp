@@ -4,6 +4,8 @@ En esta practica separaremos servidor de apache y mysql para dar mayor seguridad
 # Primer paso: Vagrant
 Generamos un archivo vagrant con vagrant init
 Vamos a explicar las lineas que modificamos o añadimos según las necesidades del proyecto
+
+
 ` config.vm.define "serverapache" do |serverapache|
     serverapache.vm.box = "debian/bullseye64"
     serverapache.vm.hostname = "AbelMonApache"
