@@ -22,6 +22,7 @@ Vamos a explicar las lineas que modificamos o añadimos según las necesidades d
 
 
 Vamos a definir el servidor como "serverapache". 
+
 Utilizaremos una debian bullseye.
 Le asignamos el nombre al servidor que nos requiere la practica. 
 En este servidor añadimos interfaz pública y privada, ya que requiere salida a exterior y tambien conectarse al equipo MYSQL en red local. Este utimo servidor solo tendrá la red privada, por tanto un único adaptador de red, con una ip local 192.168.21.22 /24 .
