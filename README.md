@@ -105,7 +105,7 @@ Comentaremos brevemente, ya que todas las lineas del script estan comentadas.
 ## Conectividad entre máquinas
 
 Una vez comprobado que se instala todo sin problemas, vamos a realizar un ping entre ambos equipos.
-````Ping 192.168.21.22```
+``` Ping 192.168.21.22 ```
 Al ejecutar desde apache (192.168.21.21) nos da respuesta.
 
 Para mostrarle al servidor Mysql cual es la ip donde tiene que permitir conexiones buscaremos el archivo "50-server.cnf" para cambiar este parametro por la ip del servidor mysql.
