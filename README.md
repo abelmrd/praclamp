@@ -6,7 +6,7 @@ Generamos un archivo vagrant con vagrant init
 Vamos a explicar las lineas que modificamos o añadimos según las necesidades del proyecto
 
 
-    `config.vm.define "serverapache" do |serverapache|
+    config.vm.define "serverapache" do |serverapache|
 
     serverapache.vm.box = "debian/bullseye64"
 
@@ -18,7 +18,7 @@ Vamos a explicar las lineas que modificamos o añadimos según las necesidades d
 
     serverapache.vm.synced_folder "./","/vagrant"
 
-    serverapache.vm.provision "shell", path: "scripta.sh"`
+    serverapache.vm.provision "shell", path: "scripta.sh"
 
 
 Vamos a definir el servidor como "serverapache". 
