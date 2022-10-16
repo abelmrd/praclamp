@@ -149,7 +149,9 @@ En nuestra prática sera /www/var/app.
 
 
 ![Apache](https://github.com/abelmrd/praclamp/blob/main/imagenes/apache.PNG)
-![MYSQL]https://github.com/abelmrd/praclamp/blob/main/mysql.PNG![]
+![](imagenes/apache.PNG)
+![MYSQL](https://github.com/abelmrd/praclamp/blob/main/mysql.PNG)
+![](imagenes/mysql.PNG)
 
 ![Imagen local](https://github.com/abelmrd/repositorio/blob/main/images/867994_1.jpg)
 ![](images/867994_1.jpg)
