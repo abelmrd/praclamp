@@ -99,9 +99,20 @@ Comentaremos brevemente, ya que todas las lineas del script estan comentadas.
 * Actualización de paquetes y repositorios
 * Instalamos la version de mysql actual, que previamente buscamos con apt search
 * Vamos a crear unas variables para definir usuario y contraseña del usuario administrador, que podriamos darle mayor utilidad en otro contexto.
-* Creamos el usuario, con la contraseña que generamos y le damos todos los permisos en todo el servidor (*.*)
+* Creamos el usuario, con la contraseña que generamos y le damos todos los permisos en todo el servidor.
 * Cambiamos la contraseña de root, y recargamos la configuración.
 
+## Conectividad entre máquinas
+
+Una vez comprobado que se instala todo sin problemas, vamos a realizar un ping entre ambos equipos.
+````Ping 192.168.21.22```
+Al ejecutar desde apache (192.168.21.21) nos da respuesta.
+
+Para mostrarle al servidor Mysql cual es la ip donde tiene que permitir conexiones buscaremos el archivo "50-server.cnf" para cambiar este parametro por la ip del servidor mysql.
+```
+/etc/mysql/mariadb.conf.d/50-server.cnf
+```
+```bind-address            = 192.168.21.22```
 
 [![](https://turismomadrid.es/images/Portada/2017/castillo-mr-nov-art-portada-2018.jpg)](https://www.as.com/)
 
