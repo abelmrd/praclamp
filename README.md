@@ -21,7 +21,7 @@ Vamos a explicar las lineas que modificamos o añadimos según las necesidades d
     serverapache.vm.provision "shell", path: "scripta.sh"
 
 
-*Vamos a definir el servidor como "serverapache". 
+* Vamos a definir el servidor como "serverapache". 
 
 * Utilizaremos una debian bullseye.
 * Le asignamos el nombre al servidor que nos requiere la practica. 
