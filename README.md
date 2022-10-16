@@ -150,10 +150,3 @@ En nuestra prática sera /www/var/app.
 
 ![](imagenes/apache.PNG)
 ![](imagenes/mysql.PNG)
-
-![Imagen local](https://github.com/abelmrd/repositorio/blob/main/images/867994_1.jpg)
-![](images/867994_1.jpg)
-
-[Enlace al archivo nuevo md](https://github.com/abelmrd/repositorio/blob/d178214b8e421dd820c5c8a696b723528a54f429/documento.md)
-
-[Enlace al archivo nuevo md](/documento.md)
