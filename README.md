@@ -1,18 +1,25 @@
 # Practica lamp en dos capas
 En esta practica separaremos servidor de apache y mysql para dar mayor seguridad y control sobre nuestro entorno de trabajo.
 
-# Primer paso: Vagrant
+## Primer paso: Vagrant
 Generamos un archivo vagrant con vagrant init
 Vamos a explicar las lineas que modificamos o añadimos según las necesidades del proyecto
 
 
 ` config.vm.define "serverapache" do |serverapache|
+
     serverapache.vm.box = "debian/bullseye64"
+
     serverapache.vm.hostname = "AbelMonApache"
+
     serverapache.vm.network "public_network"
+
     serverapache.vm.network "private_network", ip: "192.168.21.21"
+
     serverapache.vm.synced_folder "./","/vagrant"
+
     serverapache.vm.provision "shell", path: "scripta.sh"`
+    
 
 Vamos a definir el servidor como "serverapache". 
 Utilizaremos una debian bullseye.
