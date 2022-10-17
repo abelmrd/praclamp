@@ -42,7 +42,7 @@ echo " Actualizamos repositorios y paquetes"
 echo "Instalacion de paquetes LAMP. Apache"
     sudo apt -y install apache2 
     sudo systemctl reload apache2
-    sudo apt -y install default-mysql-server
+    sudo apt -y install default-mysql-client
 
 echo " Instalacion de php"
     sudo apt -y install php libapache2-mod-php php-mysql
