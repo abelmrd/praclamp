@@ -124,7 +124,8 @@ Todo correcto, es hora de implementar nuestra aplicación.
 
 ## Implementación de aplicación
 
-Intentamos clonar con git clone desde el repositorio proporcionado, pero no nos funciona.
+Clonamos con git clone desde el repositorio proporcionado.
+```git clone https://github.com/josejuansanchez/iaw-practica-lamp.git```
 #### Pasos para la aplicación
 1. Descargamos los archivos en a ruta compartida con vagrant.
 2. Movemos los archivos de la aplicacíon a una nueva carpeta creada en /www/var/.
