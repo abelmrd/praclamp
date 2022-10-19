@@ -124,15 +124,17 @@ Todo correcto, es hora de implementar nuestra aplicación.
 
 ## Implementación de aplicación
 
-Intentamos clonar con git clone desde el repositorio proporcionado, pero no nos funciona.
+Clonamos con git clone desde el repositorio proporcionado.
+```git clone https://github.com/josejuansanchez/iaw-practica-lamp.git```
 #### Pasos para la aplicación
 1. Descargamos los archivos en a ruta compartida con vagrant.
 2. Movemos los archivos de la aplicacíon a una nueva carpeta creada en /www/var/.
 En nuestra prática sera /www/var/app.
 3. Movemos el adminer.php a esta misma ruta.
 4. Una vez que tenemos todos los archivos, modificamos el archivo 000-default situado en sites-enabled para decirle que la ruta nueva sera /www/var/app y no /html.
-5. Configuramos el archivo config.php para indicarle los parametros de nuestro usuario y base de datos que tiene que utilizar en la ejecución de la aplicación.
-6. Reiniciamos apache
+5. Modificamos el dueño de los archivos para darselos a apache estando en la ruta de los archivos. ```sudo chown www-data.www-data *```
+6. Configuramos el archivo config.php para indicarle los parametros de nuestro usuario y base de datos que tiene que utilizar en la ejecución de la aplicación.
+7. Reiniciamos apache
 ```sudo systemctl restart apache```
 
 #### Configuración de la base de datos
